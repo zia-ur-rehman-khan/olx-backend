@@ -6,10 +6,13 @@ const cors = require('cors')
 const userRoute = require('./module/user/userRouter')
 const addRoute = require('./module/adds/addRouter')
 const dbHelper = require("./dbHelper/dbHelper")
+
+
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json(
 ))
+
 
 app.use("/users", userRoute)
 app.use("/add", addRoute)
